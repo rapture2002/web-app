@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>3.1.2-SNAPSHOT</version>
+	<version>3.0.6-Release</version>
 	
 	<name>maven-web-application</name>
 
@@ -95,15 +95,15 @@
 	
 	<distributionManagement>
 	    <repository>
-	      <id>nexus</id>
-	      <name>JOMACS Releases Nexus Repository</name>
-	      <url>http://172.31.54.85:8081/repository/gtb-app-release/</url>
+              <id>nexus</id>
+              <name>KOJO Releases Nexus Repository</name>
+              <url>http://192.168.6.138:8081/repository/webapp-Release/</url>
 	    </repository>
-	    
+
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>JOMACS Snapshot Nexus Repository </name>
-	      <url>http://172.31.54.85:8081/repository/gtb-app-snapshot/</url>
+	      <name>KOJO Snapshot Nexus Repository </name>
+	      <url>http://192.168.6.138:8081/repository/webapp-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -121,6 +121,16 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
+
+			<plugin>
+    				<groupId>org.apache.tomcat.maven</groupId>
+    				<artifactId>tomcat7-maven-plugin</artifactId>
+  				<version>2.1</version>
+    				<configuration>
+        				<server>TomcatServer</server>
+       				<url>http://192.168.6.137:8080/manager/text</url> # change the localhost to your ip-address
+    				</configuration>
+  			</plugin>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
