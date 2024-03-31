@@ -103,7 +103,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KOJO Snapshot Nexus Repository </name>
-	      <url>http://192.168.116.132:8081/repository/webaspp-Snapshot/</url>
+	      <url>http://192.168.116.132:8081/repository/webapp-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
