@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>3.0.6-Release</version>
+	<version>3.0.6-SNAPSHOT</version>
 	
 	<name>maven-web-application</name>
 
@@ -97,13 +97,13 @@
 	    <repository>
               <id>nexus</id>
               <name>KOJO Releases Nexus Repository</name>
-              <url>http://192.168.6.138:8081/repository/webapp-Release/</url>
+              <url>http://192.168.116.132:8081/repository/webapp-Release/</url>
 	    </repository>
 
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KOJO Snapshot Nexus Repository </name>
-	      <url>http://192.168.6.138:8081/repository/webapp-Snapshot/</url>
+	      <url>http://192.168.116.132:8081/repository/webaspp-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
