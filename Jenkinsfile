@@ -69,7 +69,7 @@ pipeline
                 emailext(
                     subject: "${JOB_NAME}.${BUILD_NUMBER} FAILED",
                     mimeType: 'text/html',
-                    to: "rapture2002@gmail.com",
+                    to: "1stpvtech@gmail.com",
                     body: "${JOB_NAME}.${BUILD_NUMBER} FAILED"
                 )
         }
@@ -77,7 +77,7 @@ pipeline
                 emailext(
                     subject: "${JOB_NAME}.${BUILD_NUMBER} PASSED",
                     mimeType: 'text/html',
-                    to: "rapture2002@gmail.com",
+                    to: "r1stpvtech@gmail.com",
                     body: "${JOB_NAME}.${BUILD_NUMBER} PASSED"
                 )
         }
