@@ -1,4 +1,4 @@
-  COLOR_MAP = [
+COLOR_MAP = [
     'SUCCESS': 'good',
     'FAILURE': 'danger',
   ]
@@ -61,6 +61,13 @@ pipeline
                 contextPath: null, 
                 war: 'target/*.war'
             }
+        }
+        stage('email') {
+        emailext body: '''Build is over
+
+        JOMACS 
+        43
+        7212483''', recipientProviders: [developers(), requestor()], subject: 'Build', to: 'tdapp@gmail.com'
         }
     }
     post {
