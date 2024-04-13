@@ -81,5 +81,22 @@ pipeline
         failure {
             slackSend channel: 'jenkins-notifications', color: 'danger', message: "Build failed: ${currentBuild.fullDisplayName}"
         }
-    } 
+    }
+     post {
+            failure {
+                emailext(
+                    subject: "${JOB_NAME}.${BUILD_NUMBER} FAILED",
+                    mimeType: 'text/html',
+                    to: "$email",
+                    body: "${JOB_NAME}.${BUILD_NUMBER} FAILED"
+                )
+            }
+            success {
+                emailext(
+                    subject: "${JOB_NAME}.${BUILD_NUMBER} PASSED",
+                    mimeType: 'text/html',
+                    to: "$email",
+                    body: "${JOB_NAME}.${BUILD_NUMBER} PASSED"
+                )
+            }
 }
