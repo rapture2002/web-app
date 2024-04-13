@@ -83,21 +83,21 @@ pipeline
         }
     }
      post {
-            failure {
+        failure {
                 emailext(
                     subject: "${JOB_NAME}.${BUILD_NUMBER} FAILED",
                     mimeType: 'text/html',
                     to: "$email",
                     body: "${JOB_NAME}.${BUILD_NUMBER} FAILED"
                 )
-            }
-            success {
+        }
+        success {
                 emailext(
                     subject: "${JOB_NAME}.${BUILD_NUMBER} PASSED",
                     mimeType: 'text/html',
                     to: "$email",
                     body: "${JOB_NAME}.${BUILD_NUMBER} PASSED"
                 )
-            }
-            }
+        }
+    }
 }
