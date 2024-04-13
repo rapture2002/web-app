@@ -62,15 +62,17 @@ pipeline
                 war: 'target/*.war'
             }
         }
-stage('email'){
-emailext body: '''Build is over
+        stage('email'){
+            steps {
+        emailext body: '''Build is over
 
-JOMACS 
-43
-}
- */
-7212483''', recipientProviders: [developers(), requestor()], subject: 'Build', to: '1stpvtech@gmail.com'
-}
+        JOMACS 
+        43
+        }
+        */
+        7212483''', recipientProviders: [developers(), requestor()], subject: 'Build', to: '1stpvtech@gmail.com'
+            } 
+        }
     }
     post {
         success {
