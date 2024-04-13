@@ -62,17 +62,6 @@ pipeline
                 war: 'target/*.war'
             }
         }
-        stage('email'){
-            steps {
-        emailext body: '''Build is over
-
-        JOMACS 
-        43
-        }
-        */
-        7212483''', recipientProviders: [developers(), requestor()], subject: 'Build', to: 'okaiedwardk@gmail.com'
-            } 
-        }
     }
     post {
 
