@@ -99,4 +99,5 @@ pipeline
                     body: "${JOB_NAME}.${BUILD_NUMBER} PASSED"
                 )
             }
+            }
 }
